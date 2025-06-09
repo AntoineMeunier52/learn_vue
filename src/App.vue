@@ -1,8 +1,8 @@
 <template>
   <div class="app-container">
     <TheHeader class="header" />
-    <Shop class="shop" />
-    <Cart class="cart" />
+    <!-- <Shop class="shop" />
+    <Cart class="cart" /> -->
     <TheFooter class="footer" />
   </div>
 </template>
