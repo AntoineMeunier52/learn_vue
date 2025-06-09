@@ -10,7 +10,7 @@
   --gray-1: #f6f6f6;
   --gray-2: #ddd;
   --gray-3: #34495e;
-  --border: 1px solid var(var(--gray-2));
+  --border: 1px solid var(--gray-2);
   --border-radius: 4px;
 
   --font-family: 'Roboto', sans-serif;
@@ -118,4 +118,31 @@ body {
 
 .m-30 {
   margin: 30px;
+}
+
+//buttons styles
+
+.btn {
+  padding: 8px 15px;
+  border: 0;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-1);
+  color: var(--text-primary-color);
+  &:hover {
+    background-color: var(--primary-2);
+  }
+}
+
+.btn-danger {
+  background-color: var(--red-1);
+  color: var(--text-primary-color);
+  &:hover {
+    background-color: var(--red-2);
+  }
 }
