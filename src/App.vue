@@ -1,47 +1,44 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="app-container">
+    <TheHeader class="header" />
+    <Shop class="shop" />
+    <Cart class="cart" />
+    <TheFooter class="footer" />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script lang="ts" setup>
+import TheHeader from './components/ShopHeader.vue'
+import TheFooter from './components/ShopFooter.vue'
+import Shop from './components/Shop/ShopMain.vue'
+import Cart from './components/Cart/ShopCart.vue'
+</script>
+
+<style lang="scss">
+@import './assets/base.scss';
+@import './assets/debug.scss';
+
+.app-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 'header header' 'shop cart' 'footer footer';
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 48px auto 48px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.header {
+  grid-area: header;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.shop {
+  grid-area: shop;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+.cart {
+  grid-area: cart;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.footer {
+  grid-area: footer;
 }
 </style>
