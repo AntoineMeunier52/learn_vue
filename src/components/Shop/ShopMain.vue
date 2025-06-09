@@ -1,9 +1,11 @@
 <template>
   <div>
-    <h1>Shop</h1>
+    <ShopProductList />
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import ShopProductList from './ShopProductList.vue'
+</script>
 
 <style lang="scss" scoped></style>

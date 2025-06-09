@@ -1,9 +1,25 @@
 <template>
-  <div>
-    <h1>shop product list</h1>
+  <div class="grid p-20">
+    <ShopProduct />
+    <ShopProduct />
+    <ShopProduct />
+    <ShopProduct />
+    <ShopProduct />
+    <ShopProduct />
+    <ShopProduct />
+    <ShopProduct />
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import ShopProduct from './ShopProduct.vue'
+</script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 300px;
+  gap: 20px;
+}
+</style>
